@@ -40,6 +40,7 @@ public abstract class Conta implements Comparable<Conta> {
         this.diaDoPagamento = DiaDoPagamento;
     }
     
+    //fazendo a sobreescrita do compareTo, para ordenar as ordenar a lista de contas 
     @Override
     public int compareTo(Conta conta){
         return this.getNome().compareTo(conta.getNome());

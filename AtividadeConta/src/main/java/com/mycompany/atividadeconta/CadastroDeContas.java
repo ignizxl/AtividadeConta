@@ -12,12 +12,9 @@ import java.util.TreeSet;
  * @author João Igor
  */
 public class CadastroDeContas {
-   private Set<Conta> lista;
-   
-   public CadastroDeContas(){
-       this.lista = new TreeSet<>();
-   }
-   
+  
+   TreeSet<Conta> lista = new TreeSet<>();
+    
    public void adicionarClientes(Conta conta){
        lista.add(conta);
        

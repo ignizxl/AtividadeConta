@@ -27,9 +27,14 @@ public class Main {
         cadastrando.adicionarClientes(conta03);
         
         //testando o método de pesquisa
-        String nome = "João";
-        System.out.println("Nome da conta pesquisada : " + nome);
-        //System.out.println("Resultado da pesquisa: " + cadastrando.pesquisarConta(nome));
+        String nome00 = "João";
+        System.out.println("Nome da conta pesquisada : " + nome00);
+        System.out.println("Resultado da pesquisa: " + cadastrando.pesquisarConta(nome00));
+        
+        //testando o método de pesquisa com um cliente não cadastrado
+        String nome01 = "Jeff";
+        System.out.println("Nome da conta pesquisada : " + nome01);
+        System.out.println("Resultado da pesquisa: " + cadastrando.pesquisarConta(nome01));
         
         //testando o método exibirClientesOrdenados
         cadastrando.exibirClientesOrdenados();
