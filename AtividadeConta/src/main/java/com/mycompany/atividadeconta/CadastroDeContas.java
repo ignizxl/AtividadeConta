@@ -4,6 +4,7 @@
  */
 package com.mycompany.atividadeconta;
 
+import java.util.Set;
 import java.util.TreeSet;
 
 /**
@@ -11,7 +12,11 @@ import java.util.TreeSet;
  * @author João Igor
  */
 public class CadastroDeContas {
-   TreeSet<Conta> lista = new TreeSet<>();
+   private Set<Conta> lista;
+   
+   public CadastroDeContas(){
+       this.lista = new TreeSet<>();
+   }
    
    public void adicionarClientes(Conta conta){
        lista.add(conta);

@@ -13,11 +13,28 @@ public class Main {
 
     public static void main(String[] args) {
         
+        CadastroDeContas cadastrando = new CadastroDeContas();
+        //2 objetos de condeDeAgua e 2 objetos de ContaDeEnergia
         Conta conta00 = new ContaDeAgua("João", 25, 45.5, 60.9);
         Conta conta01 = new ContaDeAgua("Igor", 11, 50.3, 55.0);
         Conta conta02 = new ContaDeEnergia("José", 30, 39.90, 70.3);
         Conta conta03 = new ContaDeEnergia("Fredo", 3, 29.9, 35.2);
         
-  
+        //adicionando varias
+        cadastrando.adicionarClientes(conta00);
+        cadastrando.adicionarClientes(conta01);
+        cadastrando.adicionarClientes(conta02);
+        cadastrando.adicionarClientes(conta03);
+        
+        //testando o método de pesquisa
+        String nome = "João";
+        System.out.println("Nome da conta pesquisada : " + nome);
+        //System.out.println("Resultado da pesquisa: " + cadastrando.pesquisarConta(nome));
+        
+        //testando o método exibirClientesOrdenados
+        cadastrando.exibirClientesOrdenados();
+        //testando o método retornarTotal; 
+        cadastrando.retornarTotal();
+
     }
 }
