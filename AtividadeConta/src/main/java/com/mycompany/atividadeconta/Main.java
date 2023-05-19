@@ -38,8 +38,9 @@ public class Main {
         
         //testando o método exibirClientesOrdenados
         cadastrando.exibirClientesOrdenados();
+        
         //testando o método retornarTotal; 
-        cadastrando.retornarTotal();
+        System.out.println("valor total: " + cadastrando.retornarTotal());
 
     }
 }

@@ -37,11 +37,13 @@ public class CadastroDeContas {
        
    }
    
-   public void retornarTotal(){
+   public double retornarTotal(){
        double total = 0;
        for(Conta indice : lista){
             total += indice.calcularValor();
        }
+       return total;
     }
+   
 
 }
