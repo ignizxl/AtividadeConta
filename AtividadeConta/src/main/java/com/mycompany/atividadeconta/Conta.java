@@ -8,10 +8,18 @@ package com.mycompany.atividadeconta;
  *
  * @author João Igor
  */
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta> {
     //atributos 
     private String nome;
-    private int DiaDoPagamento;
+    private int diaDoPagamento;
+    
+    //construtor
+    public Conta(String nome, int diaDoPagamento) {
+        this.nome = nome;
+        this.diaDoPagamento = diaDoPagamento;
+    }
+    
+    
     //método abstrato
     public abstract double calcularValor();
     
@@ -25,11 +33,16 @@ public abstract class Conta {
     }
 
     public int getDiaDoPagamento() {
-        return DiaDoPagamento;
+        return diaDoPagamento;
     }
 
     public void setDiaDoPagamento(int DiaDoPagamento) {
-        this.DiaDoPagamento = DiaDoPagamento;
+        this.diaDoPagamento = DiaDoPagamento;
     }
-     
+    
+    @Override
+    public int compareTo(Conta conta){
+        return this.getNome().compareTo(conta.getNome());
+    }
+        
 }

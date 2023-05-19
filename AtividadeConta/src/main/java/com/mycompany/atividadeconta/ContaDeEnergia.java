@@ -13,6 +13,15 @@ public class ContaDeEnergia extends Conta {
     private double consumoEmWk;
     private double tarifaPorWh;
     
+    //construtor
+    public ContaDeEnergia(String nome, int diaDoPagamento, double consumoEmWk, double tarifaPorWh) {
+        super(nome, diaDoPagamento);
+        this.consumoEmWk = consumoEmWk;
+        this.tarifaPorWh = tarifaPorWh;
+    }
+    
+    
+    
     //sobreescrita do método abstrato
     @Override
     public double calcularValor() {
@@ -36,5 +45,5 @@ public class ContaDeEnergia extends Conta {
     public void setTarifaPorWh(double tarifaPorWh) {
         this.tarifaPorWh = tarifaPorWh;
     }
-    
+  
 }

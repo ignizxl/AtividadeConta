@@ -19,23 +19,26 @@ public class CadastroDeContas {
    }
    
    public String pesquisarConta(String nome){
-       for(Conta contas : lista){
-           if(nome.equals(contas)){
-               return contas.toString();
+       for(Conta indice : lista){
+           if(nome.equals(indice.getNome())){
+               return indice.toString();
                
            }
        }
-       return null;
+       return "Cliente não encontrado!";
    }
    
    public void exibirClientesOrdenados(){
+       for(Conta indice : lista){
+           System.out.println(indice.getNome());
+       }
        
    }
    
    public void retornarTotal(){
        double total = 0;
-       for(Conta contas : lista){
-        total += contas.calcularValor();
+       for(Conta indice : lista){
+            total += indice.calcularValor();
        }
     }
 

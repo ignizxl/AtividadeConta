@@ -13,6 +13,15 @@ public class ContaDeAgua extends Conta {
     //atributos 
     private double consumoEmMetroCubico;
     private double valorPorMetroCubico;
+    //construtor
+    public ContaDeAgua(String nome, int diaDoPagamento, double consumoEmMetroCubico, double valorPorMetroCubico) {
+        super(nome, diaDoPagamento);
+        this.consumoEmMetroCubico = consumoEmMetroCubico;
+        this.valorPorMetroCubico = valorPorMetroCubico;
+    }
+    
+    
+    
     
     //sobrescrita do método abstrato
     @Override
@@ -38,4 +47,5 @@ public class ContaDeAgua extends Conta {
     public void setValorPorMetroCubico(double valorPorMetroCubico) {
         this.valorPorMetroCubico = valorPorMetroCubico;
     }
+
 }
